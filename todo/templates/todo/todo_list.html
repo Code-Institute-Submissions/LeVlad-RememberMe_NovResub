@@ -7,13 +7,38 @@
     <title>Remember me</title>
 </head>
 <body>
+    
     <div class="div_center">
 
-        <h1>Hello World</h1>
+        <h1>Things I need to do:</h1> 
+            
+        <table>
+           {% for item in items %}
+           <tr> 
+               {% if item.done %}
+               <td><strike>{{ item.name }}</strike></td>
+               {% else %}
+               <td><strong>{{ item.name }}</strong></td>
+               {% endif %}
+                
+                <td>{{ item.location }}</td>
+                <td><strong>{{ item.priority }}</strong></td>
+                <td>{{ item.done }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td>
+                    <h2>There is nothing to do</h2>
+                </td>
+            </tr>
+            {% endfor %}
+        
+        </table>
 
-        <p>My first paragraph</p>
+        
+       
     </div>
-    
+    <a href="/add">Add item</a>
     
 </body>
 </html>

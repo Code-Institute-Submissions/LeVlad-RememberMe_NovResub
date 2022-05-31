@@ -30,5 +30,8 @@ The main purpose of the website is to be a virtual calendar where users can set 
 …]()
 
 ## Acknowledgements ##
-
+1. Code Institute Courses
+2. Richard Wells - CI mentor
+3. StackOverflow
+4. Django Documentation
 

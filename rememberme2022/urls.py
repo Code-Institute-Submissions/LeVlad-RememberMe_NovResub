@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from todo import views
+from todo.views import get_todo_list
 from django.views.generic.base import TemplateView
 
 urlpatterns = [
@@ -23,6 +24,7 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path('', TemplateView.as_view(template_name='home.html'), name='home'),
     path('', views.get_todo_list, name='get_todo_list'),
+    path('todo/templates/registration/', views.get_login, name='login'),
     path('add', views.add_item, name='add'),
     path('edit/<item_id>', views.edit_item, name='edit'),
     path('toggle/<item_id>', views.toggle_item, name='toggle'),

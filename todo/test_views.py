@@ -1,6 +1,7 @@
 from django.test import TestCase
 from .models import Item
 
+
 class TestViews(TestCase):
 
     def test_can_get_todo_list_html(self):
@@ -22,7 +23,6 @@ class TestViews(TestCase):
     def test_add_item(self):
         response = self.client.post('/add', {'name': 'Test Added Item'})
         self.assertRedirects(response, '/')
-       
 
     def test_delete_item(self):
         item = Item.objects.create(name='Test Todo Item')
@@ -30,7 +30,6 @@ class TestViews(TestCase):
         self.assertRedirects(response, '/')
         existing_items = Item.objects.filter(id=item.id)
         self.assertEqual(len(existing_items), 0)
-
 
     def test_can_change_item(self):
         item = Item.objects.create(name='Test Todo Item', done=True)
@@ -41,7 +40,7 @@ class TestViews(TestCase):
 
     def test_can_edit_item(self):
         item = Item.objects.create(name='Test Todo Item')
-        response = self.client.post(f'/edit/{item.id}', {'name': 'Updated Name'})
+        response = self.client.post(f'/edit/{item.id}',{'name': 'Updated Name'})
         self.assertRedirects(response, '/')
         updated_item = Item.objects.get(id=item.id)
         self.assertEqual(updated_item.name, 'Updated Name')

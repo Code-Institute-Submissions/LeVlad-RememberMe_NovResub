@@ -4,10 +4,11 @@ from .forms import ItemForm
 
 
 def get_login(request):
-    return render(request, 'todo/login.html')
-"""
-Function to get all the elements and render them in HTML
-"""
+    return render(request, 'login.html')
+    """
+    Function to get all the elements and render them in HTML
+    """
+
 
 def get_todo_list(request):
     items = Item.objects.all()
@@ -17,10 +18,10 @@ def get_todo_list(request):
     return render(request, 'todo/todo_list.html', context)
 
 
-"""
-Function to add an item to the ToDo list by filling a form with
-descriptive information of where, what and if it is done
-"""
+    """
+    Function to add an item to the ToDo list by filling a form with
+    descriptive information of where, what and if it is done
+    """
 
 
 def add_item(request):
@@ -38,9 +39,10 @@ def add_item(request):
     return render(request, 'todo/add_item.html', context)
 
 
-"""Function to edit the items created
-that retrieves the information that was sent 
-and populates the form ready to edit"""
+    """Function to edit the items created
+    that retrieves the information that was sent 
+    and populates the form ready to edit
+    """
 
 
 def edit_item(request, item_id):
@@ -60,8 +62,8 @@ def edit_item(request, item_id):
     return render(request, 'todo/edit_item.html', context)
 
 
-"""Function to change between the states of a task
-the user ca change it from done to not done"""
+    """Function to change between the states of a task
+    the user ca change it from done to not done"""
 
 
 def toggle_item(request, item_id):
@@ -70,7 +72,7 @@ def toggle_item(request, item_id):
     item.save()
     return redirect('get_todo_list')
 
-"""Function to delete the task"""
+    """Function to delete the task"""
 
 
 def delete_item(request, item_id):

@@ -16,7 +16,8 @@
 
 ## User Stories ##
 
-![Agile Working](https://user-images.githubusercontent.com/88729876/189502819-e7124234-a6f8-4dd9-8a5b-8670d77235dc.jpg)
+![Agile Working](https://user-images.githubusercontent.com/88729876/189502894-8ddb91e2-8323-4962-8fc6-c0ebcd0d0928.jpg)
+
 
 
 

@@ -1,10 +1,30 @@
 # Remember Me #
 
+# Design #
+# User Stories #
+# Purpose #
+# Technologies #
+# Testing #
+# References #
+# Acknowledgements #
+
+
+## Design ##
+
+
+### Layout ###
+
+## User Stories ##
+
+![Agile Working](https://user-images.githubusercontent.com/88729876/189502819-e7124234-a6f8-4dd9-8a5b-8670d77235dc.jpg)
+
+
+
+
 ## Purpose ##
 
-The main purpose of the website is to be a virtual calendar where users can set reminders with details of # what #, # where # and # priority #.
+The main purpose of the website is to be a virtual space where users can set reminders with details of # what #, # where # and # priority #.
 
-## Layout ##
 
 
 ### Building the site ###
@@ -15,6 +35,7 @@ The main purpose of the website is to be a virtual calendar where users can set 
 
 
 ## Technologies ##
+
 
 ## Tests ##
 

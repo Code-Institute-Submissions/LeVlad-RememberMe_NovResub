@@ -3,11 +3,18 @@ from .models import Task
 from .forms import TaskForm
 
 
-def index(request):
+def home(request):
     """
     Function to get the main page
     """
     return render(request, 'home.html')
+
+
+def index(request):
+    """
+    Function to get the index page
+    """
+    return render(request, 'reminder/index.html')
 
 
 def get_login(request):

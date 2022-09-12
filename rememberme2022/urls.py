@@ -15,16 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from todo import views
+from reminder import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("accounts/", include("django.contrib.auth.urls")),
-    path('todo/templates/', views.index, name='home'),
+    path('', views.index, name='home'),
     path('login', views.get_login, name='login'),
-    path('add', views.add_item, name='add'),
-    path('edit/<item_id>', views.edit_item, name='edit'),
-    path('toggle/<item_id>', views.toggle_item, name='toggle'),
-    path('delete/<item_id>', views.delete_item, name='delete'),
+    path('add', views.add_task, name='add'),
+    path('edit/<item_id>', views.edit_task, name='edit'),
+    path('toggle/<item_id>', views.toggle_task, name='toggle'),
+    path('delete/<item_id>', views.delete_task, name='delete'),
 ]

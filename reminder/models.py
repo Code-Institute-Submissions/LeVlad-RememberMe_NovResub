@@ -1,9 +1,9 @@
 from django.db import models
 
 
-class Item(models.Model):
+class Task(models.Model):
 
-    """Creating a new class for items that can inherit from Django
+    """Creating a new class for tasks that can inherit from Django
     and use attributes as descriptive options for ToDo list
     """
 

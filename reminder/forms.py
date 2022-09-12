@@ -1,9 +1,9 @@
 from django import forms
-from .models import Item
+from .models import Task
 
 
-class ItemForm(forms.ModelForm):
+class TaskForm(forms.ModelForm):
 
     class Meta:
-        model = Item
+        model = Task
         fields = ('name', 'location', 'priority', 'done')

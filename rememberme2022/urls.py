@@ -24,7 +24,8 @@ urlpatterns = [
     path('', views.index, name='home'),
     path('login', views.get_login, name='login'),
     path('add', views.add_task, name='add'),
-    path('edit/<item_id>', views.edit_task, name='edit'),
-    path('toggle/<item_id>', views.toggle_task, name='toggle'),
-    path('delete/<item_id>', views.delete_task, name='delete'),
+    path('list', views.get_reminder_list, name='reminder_list'),
+    path('edit/<task_id>', views.edit_task, name='edit'),
+    path('toggle/<task_id>', views.toggle_task, name='toggle'),
+    path('delete/<task_id>', views.delete_task, name='delete'),
 ]

@@ -1,22 +1,26 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit an item</title>
+    <title>Edit Task</title>
 </head>
 <body>
-    <h1>Edit a Todo item</h1>
+    <h1>Edit Task</h1>
     <div class="div">
         <form method="POST">
             {% csrf_token %}
-            {{ form.as_p }}
+            {{ form|crispy }}
             <div class="div">
                 <p><button type="submit">Update item</button>
                 </p>
             </div>
         </form>
+
+        <div class="back-btn btn btn-info">Back</div>
         
 
        

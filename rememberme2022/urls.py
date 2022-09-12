@@ -16,16 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from reminder import views
-from django.conf.urls.static import static
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("accounts/", include("django.contrib.auth.urls")),
-    path('home', views.home, name='home'),
-    
-    path('', views.index, name='index'),
-    path('login', views.get_login, name='login'),
+    path('accounts/', include('allauth.urls')),
+    path('', views.home, name='home'),
+    path('profile', views.profile, name='profile'),
+    path('index', views.index, name='index'),
     path('add', views.add_task, name='add'),
     path('list', views.get_reminder_list, name='reminder_list'),
     path('edit/<task_id>', views.edit_task, name='edit'),

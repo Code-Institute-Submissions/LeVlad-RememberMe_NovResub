@@ -16,10 +16,12 @@
             {% csrf_token %}
             {{ form|crispy }}
             <div class="div">
-                <p><button type="submit">Add item</button>
+                <p><button class="btn btn-success" type="submit">Add item</button>
                 </p>
             </div>
         </form>
+
+        <div class="back-btn btn btn-info">Back</div>
         
 
        

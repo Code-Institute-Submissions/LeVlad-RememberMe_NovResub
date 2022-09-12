@@ -6,15 +6,32 @@
 
 {% block content %}
 
+<div class="navbar-brand main-navbar">
+  <ul>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'home' %}">HOME</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'profile' %}">PROFILE</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'reminder_list' %}">REMINDER</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_logout' %}">LOG OUT</a>
+    </li>
+    </ul>
+</div>
 {% if user.is_authenticated %}
   Hi {{ user.username }}
   <br>
 <div class="nav-dropdown" id="task-list"><a href="reminder_list.html">Task List</a></div>
   <br>
-  <p><a href="{% url 'logout' %}">Log Out</a></p>
+  <p><a href="{% url 'account_logout' %}">Log Out</a></p>
 {% else %}
   <p class="login-p">You are not logged in</p>
-  <a href="{% url 'login' %}">Log In</a>
+  <a href="{% url 'account_login' %}">Log In</a>
  
 {% endif %}
 {% endblock %}
+

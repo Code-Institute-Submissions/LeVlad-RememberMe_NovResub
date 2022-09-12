@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib.auth.decorators import login_required
 from .models import Task
 from .forms import TaskForm
+
 
 
 def home(request):
@@ -8,6 +10,14 @@ def home(request):
     Function to get the main page
     """
     return render(request, 'home.html')
+
+
+@login_required()
+def profile(request):
+    """
+    Function to get the profile
+    """
+    return render(request, 'profile.html')    
 
 
 def index(request):

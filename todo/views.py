@@ -3,14 +3,24 @@ from .models import Item
 from .forms import ItemForm
 
 
+def index(request):
+    """
+    Function to get the main page
+    """
+    return render(request, 'todo/home.html')
+
+
 def get_login(request):
-    return render(request, 'login.html')
     """
-    Function to get all the elements and render them in HTML
+    Function to get the login page
     """
+    return render(request, 'todo/login.html')
 
 
 def get_todo_list(request):
+    """
+    Function to get all the elements and render them in HTML
+    """
     items = Item.objects.all()
     context = {
         'items': items

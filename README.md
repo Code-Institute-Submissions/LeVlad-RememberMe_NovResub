@@ -11,6 +11,15 @@
 
 ## Design ##
 
+Having a minimal design the site will focus more on functionality.
+
+Mobile 
+![MOBILE VIEW](https://user-images.githubusercontent.com/88729876/189557228-35572bd7-c184-4230-b61e-5e85b620b4c6.jpg)
+
+Desktop
+![DESKTOP VIEW 2](https://user-images.githubusercontent.com/88729876/189557233-6ffc63ab-b295-4b2b-a15d-102a8fe1c501.jpg)
+
+
 
 ### Layout ###
 

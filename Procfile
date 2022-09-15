@@ -1,0 +1,1 @@
+web: gunicorn rememeberme2022.wsgi 

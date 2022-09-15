@@ -9,8 +9,9 @@ class Task(models.Model):
 
     name = models.CharField(max_length=50, null=False, blank=False)
     priority = models.CharField(max_length=10, null=False, blank=False)
-    location = models.CharField(max_length=50, null=False, blank=False)
+    location = models.CharField(max_length=200, null=False, blank=False)
     done = models.BooleanField(null=False, blank=False, default=False)
+    created = models.DateTimeField(auto_now_add=True)
 
     """
     Function to override the build-in function to render strings in HTML
@@ -19,4 +20,5 @@ class Task(models.Model):
     """
 
     def __str__(self):
-        return str(self.name)
+        return f'There is {self.name} to do in {self.location} \
+            with a {self.priority} priority'

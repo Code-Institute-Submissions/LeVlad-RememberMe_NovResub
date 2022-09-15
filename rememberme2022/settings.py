@@ -40,11 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'reminder',
     'crispy_forms',
-    'users',
     'profiles',
-    'tasks',
-   
-
 ]
 
 SITE_ID = 1

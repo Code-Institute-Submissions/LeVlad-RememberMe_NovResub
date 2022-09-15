@@ -1,13 +1,12 @@
 body{
     background-color:seagreen;
 }
-
+.overlay{
+    color:antiquewhite;
+    transform: transparent;
+}
 .logo-box {
     margin-top: 50 rem;
     margin-left: 50 rem;
-}
-
-.login-p{
-    margin-top: 50 rem;
-    margin-left: 50 rem;
+    text-transform: capitalize;
 }

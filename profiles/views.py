@@ -11,6 +11,6 @@ def profiles_index(request):
 @login_required()
 def profile(request):
     """
-    Function to get the profile
+    Function to get the profile via login
     """
     return render(request, 'profiles/profile.html')    

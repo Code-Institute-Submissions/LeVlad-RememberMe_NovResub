@@ -1,8 +1,14 @@
 <!-- templates/home.html-->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block title %}Home{% endblock %}
+
+{% block header %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}">
+{% endblock %}
+
 
 {% block content %}
 <nav class="navbar navbar-expand-lg bg-light">

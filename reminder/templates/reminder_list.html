@@ -1,6 +1,21 @@
 {% extends 'base.html' %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col">Hello</div>
+        </div>
+    </div>
+{% endblock %}
+
+<header>
+    <div class="header-logo">Remember</div>
+</header>
+
+
+{% block content %}
 <div class="container-fluid">
-    <title>Task List</title>
+    <title><h1>Task List</h1></title>
     <div class="div_center">
 
         <h1>Current Tasks:</h1>
@@ -48,6 +63,8 @@
     </div>
 
 
-<a class="btn btn-success" href="{% url 'add' %}">Add item</a>
+<a class="btn btn-success" href="/add">Add item</a>
 
 </div>
+
+{% endblock %}

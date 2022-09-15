@@ -20,11 +20,7 @@ from reminder import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
-    path('', views.index, name='index'),
+    path('index/', views.get_index, name='index'),
     path('profiles/', include('profiles.urls')),
-    path('', views.get_reminder_list, name='reminder_list'),
-    path('add', views.add_task, name='add'),
-    path('edit/<task_id>', views.edit_task, name='edit'),
-    path('toggle/<task_id>', views.toggle_task, name='toggle'),
-    path('delete/<task_id>', views.delete_task, name='delete'),
+    path('reminder/', include('reminder.urls')),
     ]

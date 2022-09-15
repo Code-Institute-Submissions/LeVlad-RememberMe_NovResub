@@ -1,12 +1,39 @@
 body{
-    background-color:seagreen;
+    background-color:rgb(15, 153, 75);
 }
-.overlay{
-    color:antiquewhite;
-    transform: transparent;
+.main-header {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    width: auto;
+    height: auto;
+    
+    
 }
 .logo-box {
-    margin-top: 50 rem;
-    margin-left: 50 rem;
+    margin-top: 3rem;
+    margin-left: 3rem;
+ }
+
+ .logo{
+    display:block;
     text-transform: capitalize;
+    font-weight: 300;
+    font-style: italic;
+     }
+.map-box{
+    border: 1px;
+    border-color: rgb(25, 27, 27);
+    background-color: aqua;
+    width: 60rem;
+    height: 30rem;
+    margin-top: 5rem;
+    margin-left: 2rem;
+    margin-bottom: 12rem;
+}
+.tasks-box{
+    margin-right:2rem;
+    background-color: aqua;
+    width: 15rem;
+    height: 15rem;
+    margin-top: 5rem;
 }

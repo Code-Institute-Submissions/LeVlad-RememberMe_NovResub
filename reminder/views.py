@@ -10,13 +10,6 @@ def home(request):
     return render(request, 'home.html')
 
 
-def index(request):
-    """
-    Function to get the main page
-    """
-    return render(request, 'index.html')
-
-
 def get_login(request):
     """
     Function to get the login page
@@ -24,11 +17,18 @@ def get_login(request):
     return render(request, 'login.html')
 
 
+def get_index(request):
+    """
+    Function to get the index page
+    """
+    return render(request, 'index.html')
+
+
 def get_reminder_list(request):
     """
     Function to get all the elements and render them in HTML
     """
-    tasks = Task.objects.all().values()
+    tasks = Task.objects.all()
     context = {
         'tasks': tasks,
     }

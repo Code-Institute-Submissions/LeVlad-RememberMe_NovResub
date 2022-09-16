@@ -1,7 +1,7 @@
 from django.urls import path
-from reminder import views
+from . import views
 
 urlpatterns = [
-    path('reminder', views.get_task_list, name='task_list'),
+    path('', views.get_task_list, name='task_list'),
 
     ]

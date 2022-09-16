@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
   {% block meta %}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -32,9 +31,8 @@
   {% endblock %}
   {% block extra_css%}
   {% endblock %}
-
-
 </head>
+
 <header>
   {% block content %}
   {% include 'includes/main-header.html' %}
@@ -44,9 +42,12 @@
 
 <body>
  
-  <div class="row">
-    <div class="container map-box col-8">
-      <h2>Map</h2>
-    </div>
+  
+    <br>
+    <div class="center">
+    <p class="geolite-license ml-2"></p>This product includes GeoLite2 data created by MaxMind, available from
+    <a href="https://www.maxmind.com">https://www.maxmind.com</a>
+   </p>
+  </div>
     
 </body>

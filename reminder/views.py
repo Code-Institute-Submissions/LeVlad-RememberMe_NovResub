@@ -93,3 +93,7 @@ def delete_task(_request, task_id):
     task.delete()
 
     return redirect('get_task_list')
+
+#current_l = geolocator.geocode(city)
+
+#m = folium.map(width=300, height=500, location=current_l)

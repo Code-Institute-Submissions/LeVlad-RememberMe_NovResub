@@ -12,38 +12,36 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {% endblock %}
 
-  {% block extra_meta %}
-  {% endblock %}
-
-  {% block corejs %}
   
-  {% endblock %}
 
-  {% block extra_js %}
-  {% endblock %}
   {% block corecss %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300&display=swap">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="{% static 'css/base.css' %}">
   {% endblock %}
-  {% block extra_css%}
-  {% endblock %}
+ 
+  <title>RememberMe {% block extra_title %}{% endblock %}</title>
 </head>
-
+<body>
 <header>
-  {% block content %}
-  {% include 'includes/main-header.html' %}
-  {% endblock %}
+  <nav>
+        {% include 'main-header.html' %}
+ </nav>
 </header>
 
-
-<body>
- 
-  
-    
-    
 </body>
+
+{% block corejs %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+  crossorigin="anonymous"></script>
+{% endblock %}
 {% block postload_js %}
 
 <p>Click the button to get your coordinates.</p>

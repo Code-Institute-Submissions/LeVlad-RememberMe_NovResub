@@ -12,7 +12,7 @@ def contact(request):
     return render(request, 'contact.html')
 
 
-def contactView(request):
+def contact_view(request):
     if request.method == "GET":
         form = ContactForm()
     else:
@@ -21,11 +21,12 @@ def contactView(request):
             subject = form.cleaned_data["subject"]
             from_email = form.cleaned_data["from_email"]
             message = form.cleaned_data['message']
-            messages.success(request, 'Thank you for your message. We will contact you soon.')
+            messages.success(request, 'Thank you for your message.\
+                 We will contact you soon.')
             try:
-                send_mail(subject, message, from_email, ["admin@example.com"])
+                send_mail(subject, message, from_email, ["admin@remember.com"])
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
             return redirect("success")
 
-    return render(request, "contact/contact.html", {"form": form})
+    return render(request, "contact.html", {"form": form})

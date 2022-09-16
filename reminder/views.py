@@ -12,7 +12,7 @@ def get_index(request):
     """
     Function to get the index page
     """
-    return render(request, 'index.html')
+    return render(request, 'templates/index.html')
 
 
 def handler404(request, *args, **kwargs):

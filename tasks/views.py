@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Task
-from reminder.forms import TaskForm
+from .forms import TaskForm
 
 
 def get_task_list(request):
@@ -11,7 +11,7 @@ def get_task_list(request):
     context = {
         'tasks': tasks,
     }
-    return render(request, 'task_list.html', context)
+    return render(request, 'tasks/task_list.html', context)
 
 
 def add_task(request):

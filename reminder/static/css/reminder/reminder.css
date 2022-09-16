@@ -44,10 +44,10 @@ body{
 .tasks-box{
     margin-right:2rem;
     background-color: rgb(222, 252, 252);
-    width:22rem;
-    height:30rem;
+    width:18rem;
+    height:25rem;
     margin-top: 5rem;
-    border-color: rgb(6, 71, 34);
+    border-color: rgb(216, 16, 32);
     border-width:2px;
     border-style: solid;
 }

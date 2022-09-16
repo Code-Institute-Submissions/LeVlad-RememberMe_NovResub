@@ -1,23 +1,16 @@
+<!-- task-list_template-->
 {% extends 'base.html' %}
-
-{% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col">Hello</div>
-        </div>
-    </div>
+{% load static %}
+{% block corecss %}
+<link rel="stylesheet" href="{% static 'css/reminder/reminder.css' %}">
 {% endblock %}
-
-<header>
-    <div class="header-logo">Remember</div>
-</header>
+{% block title %}Tasks{% endblock %}
 
 
 {% block content %}
-<div class="container-fluid">
+<div class="container-fluid tasks">
     <title><h1>Task List</h1></title>
-    <div class="div_center">
-
+    <div class="task-table">
         <h1>Current Tasks:</h1>
 
         <table>
@@ -61,10 +54,23 @@
 
 
     </div>
-
-
+    
 <a class="btn btn-success" href="/add">Add item</a>
 
 </div>
+<div class="row ">
+    <div class="container map-box col-8">
+        <h2>Map</h2>
+    </div>
+<div class="row">
+    <div class="container tasks-box col-4">
+        <h2>Tasks</h2>
+    </div>
+    
+   
+   {{ form }}
+  </div>
+</div>
+
 
 {% endblock %}

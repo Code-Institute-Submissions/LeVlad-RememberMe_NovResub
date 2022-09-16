@@ -24,7 +24,7 @@ def get_index(request):
     return render(request, 'index.html')
 
 
-def get_reminder_list(request):
+def get_task_list(request):
     """
     Function to get all the elements and render them in HTML
     """
@@ -32,7 +32,7 @@ def get_reminder_list(request):
     context = {
         'tasks': tasks,
     }
-    return render(request, 'reminder_list.html', context)
+    return render(request, 'task_list.html', context)
 
 
 def add_task(request):
@@ -45,7 +45,7 @@ def add_task(request):
         if form.is_valid():
             form.save()
 
-        return redirect('get_reminder_list')
+        return redirect('get_task_list')
     form = TaskForm()
     context = {
             'form': form
@@ -67,7 +67,7 @@ def edit_task(request, task_id):
         if form.is_valid():
             form.save()
 
-        return redirect('get_reminder_list')
+        return redirect('get_task_list')
     form = TaskForm(instance=task)
     context = {
             'form': form
@@ -84,7 +84,7 @@ def toggle_task(_request, task_id):
     task = get_object_or_404(Task, id=task_id)
     task.done = not task.done
     task.save()
-    return redirect('get_reminder_list')
+    return redirect('get_task_list')
 
 
 def delete_task(_request, task_id):
@@ -92,4 +92,4 @@ def delete_task(_request, task_id):
     task = get_object_or_404(Task, id=task_id)
     task.delete()
 
-    return redirect('get_reminder_list')
+    return redirect('get_task_list')

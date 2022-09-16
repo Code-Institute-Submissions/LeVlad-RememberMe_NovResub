@@ -10,6 +10,8 @@
     <title>Add Task</title>
 </head>
 <body>
+
+{% block content %}
     <h1>Add Task</h1>
     <div class="div_center">
         <form method="POST" action="/add">
@@ -22,6 +24,8 @@
         </form>
 
         <div class="back-btn btn btn-info">Back</div>
+{% endblock %}
+    
         
 
        

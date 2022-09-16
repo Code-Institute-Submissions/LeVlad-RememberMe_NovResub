@@ -18,9 +18,13 @@ from django.urls import path, include
 from reminder import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', views.home, name='home'),
-    path('index/', views.get_index, name='index'),
-    path('profiles/', include('profiles.urls')),
-    path('reminder/', include('reminder.urls')),
+    path('admin', admin.site.urls),
+    path('reminder', views.home, name='home'),
+    path('', views.get_index, name='index'),
+    path('profiles', include('profiles.urls')),
+    path('add', views.add_task, name='add'),
+    path('toggle/<int:task_id>/', views.toggle_task, name='toggle'),
+    path('edit/<int:task_id>', views.toggle_task, name='edit'),
+    path('delete/<int:task_id>', views.delete_task, name='delete'),
+    path('reminder', views.get_task_list, name='get_task_list'),
     ]

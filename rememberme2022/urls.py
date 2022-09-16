@@ -21,6 +21,7 @@ urlpatterns = [
     path('admin', admin.site.urls),
     path('reminder', views.home, name='home'),
     path('', views.get_index, name='index'),
+    path('accounts/', include('allauth.urls')),
     path('profiles', include('profiles.urls')),
     path('add', views.add_task, name='add'),
     path('toggle/<int:task_id>/', views.toggle_task, name='toggle'),

@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'reminder',
     'crispy_forms',
     'profiles',
+    'allauth',
+    'allauth.account',
 ]
 
 SITE_ID = 1

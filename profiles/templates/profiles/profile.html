@@ -11,6 +11,55 @@
 
 {% block content %}
 
-{{ user }}
+{% if user.is_logged_in %}
+<div class="task-table">
+  <h1>Current Tasks:</h1>
+
+  <table>
+      {% for task in tasks %}
+      <tr>
+          {% if task.done %}
+          <td><strike>{{ task.name }}</strike></td>
+          {% else %}
+          <td><strong>{{ task.name }}</strong></td>
+          {% endif %}
+
+          <td>{{ task.location }}</td>
+          <td><strong>{{ task.priority }}</strong></td>
+          <td>{{ task.done }}</td>
+          <td>
+              <a href="/edit/{{ task.id }}">
+                  <button>Edit</button>
+              </a>
+          </td>
+          <td>
+              <a href="/toggle/{{ task.id }}">
+                  <button>Change</button>
+              </a>
+          </td>
+          <td>
+              <a href="/delete/{{ task.id }}">
+                  <button>Delete</button>
+              </a>
+          </td>
+      </tr>
+      {% empty %}
+      <tr>
+          <td>
+              <h2>There are no tasks</h2>
+          </td>
+      </tr>
+      {% endfor %}
+
+  </table>
+{% else %}
+<h2>Log In</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Log In</button>
+</form>
+{% endif %}
+
 {% endblock %}
 

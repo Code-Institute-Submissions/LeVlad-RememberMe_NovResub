@@ -1,5 +1,7 @@
 <!--base_template-->
 {% load static %}
+{% load crispy_forms_tags %}
+
 <!doctype html>
 <html lang="en">
 
@@ -14,11 +16,7 @@
   {% endblock %}
 
   {% block corejs %}
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" ></script>
-
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/394a00d2fc.js" crossorigin="anonymous"></script>
+  
   {% endblock %}
 
   {% block extra_js %}
@@ -46,3 +44,28 @@
     
     
 </body>
+{% block postload_js %}
+
+<p>Click the button to get your coordinates.</p>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+</script>
+{% endblock %}

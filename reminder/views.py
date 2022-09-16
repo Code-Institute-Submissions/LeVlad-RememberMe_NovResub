@@ -1,6 +1,4 @@
-from django.shortcuts import render, redirect, get_object_or_404
-from tasks.models import Task
-from .forms import TaskForm
+from django.shortcuts import render
 
 
 def get_login(request):
@@ -17,45 +15,14 @@ def get_index(request):
     return render(request, 'index.html')
 
 
-def edit_task(request, task_id):
-    """
-    Function to edit the items created that
-    retrieves the information that was sent
-    and populates the form ready to edit
-    """
-
-    task = get_object_or_404(Task, id=task_id)
-    if request.method == "POST":
-        form = TaskForm(request.POST, instance=task)
-        if form.is_valid():
-            form.save()
-
-        return redirect('get_task_list')
-    form = TaskForm(instance=task)
-    context = {
-            'form': form
-        }
-
-    return render(request, 'edit_task.html', context)
+def handler404(request, *args, **kwargs):
+    """ Error Handler 404 - Page Not Found """
+    return render(request, "errors/404.html", status=404)
 
 
-def toggle_task(_request, task_id):
-    """
-    Function to change between the states of a task
-    the user ca change it from done to not done
-    """
-    task = get_object_or_404(Task, id=task_id)
-    task.done = not task.done
-    task.save()
-    return redirect('get_task_list')
-
-
-def delete_task(_request, task_id):
-    """Function to delete the task"""
-    task = get_object_or_404(Task, id=task_id)
-    task.delete()
-
-    return redirect('get_task_list')
+def handler500(request):
+    """ Error Handler 500 - Internal Server Error """
+    return render(request, "errors/500.html", status=500)
 
 #current_l = geolocator.geocode(city)
 

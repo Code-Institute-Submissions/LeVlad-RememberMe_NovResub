@@ -15,17 +15,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from reminder import views
+from tasks import views
+from reminder import views as view_r
+from home import views as view_h
+from tasks import views as view_t
+
 
 urlpatterns = [
     path('admin', admin.site.urls),
-    path('home', views.home, name='home'),
-    path('', views.get_index, name='index'),
+    path('', view_h.home, name='home'),
+    path('reminder', view_r.get_index, name='index'),
     path('accounts', include('allauth.urls')),
     path('profiles', include('profiles.urls')),
-    path('add', views.add_task, name='add'),
-    path('toggle/<int:task_id>', views.toggle_task, name='toggle'),
-    path('edit/<int:task_id>', views.toggle_task, name='edit'),
-    path('delete/<int:task_id>', views.delete_task, name='delete'),
+    path('add', view_t.add_task, name='add'),
+    path('toggle/<int:task_id>', view_t.toggle_task, name='toggle'),
+    path('edit/<int:task_id>', view_t.toggle_task, name='edit'),
+    path('delete/<int:task_id>', view_t.delete_task, name='delete'),
     path('reminder', views.get_task_list, name='get_task_list'),
     ]

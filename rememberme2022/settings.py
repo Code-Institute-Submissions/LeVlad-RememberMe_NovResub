@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'profiles',
     'allauth',
     'allauth.account',
+    'tasks',
+    'home',
+    'contact',
+    
 ]
 
 SITE_ID = 1

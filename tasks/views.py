@@ -1,20 +1,36 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from tasks.models import Task
-from .forms import TaskForm
+from .models import Task
+from reminder.forms import TaskForm
 
 
-def get_login(request):
+def get_task_list(request):
     """
-    Function to get the login page
+    Function to get all the elements and render them in HTML
     """
-    return render(request, 'login.html')
+    tasks = Task.objects.all()
+    context = {
+        'tasks': tasks,
+    }
+    return render(request, 'task_list.html', context)
 
 
-def get_index(request):
+def add_task(request):
     """
-    Function to get the index page
+    Function to add a task to the Reminders list by filling a form with
+    descriptive information of where, what and if it is done
     """
-    return render(request, 'index.html')
+    if request.method == "POST":
+        form = TaskForm(request.POST)
+        if form.is_valid():
+            form.save()
+
+        return redirect('get_task_list')
+    form = TaskForm()
+    context = {
+            'form': form
+        }
+
+    return render(request, 'add_task.html', context)
 
 
 def edit_task(request, task_id):
@@ -56,7 +72,3 @@ def delete_task(_request, task_id):
     task.delete()
 
     return redirect('get_task_list')
-
-#current_l = geolocator.geocode(city)
-
-#m = folium.map(width=300, height=500, location=current_l)

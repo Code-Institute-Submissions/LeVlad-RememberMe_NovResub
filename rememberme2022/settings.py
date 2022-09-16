@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'django_google_maps',
     'reminder',
     'crispy_forms',
     'profiles',
@@ -46,10 +47,12 @@ INSTALLED_APPS = [
     'tasks',
     'home',
     'contact',
-    
+
 ]
 
 SITE_ID = 1
+
+GOOGLE_MAPS_API_KEY = 'AIzaSyDKLI-zDTvO4X-3nznxsmcXgw0pBTpruf0'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -60,7 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
+
 ]
 
 
@@ -69,7 +72,7 @@ ROOT_URLCONF = 'rememberme2022.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

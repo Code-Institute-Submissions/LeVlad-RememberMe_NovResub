@@ -31,5 +31,6 @@ def contact_view(request):
 
     return render(request, "contact.html", {"form": form})
 
+
 def success_view(request):
     return render(request, 'success.html')

@@ -1,18 +1,15 @@
 <!-- task-list_template-->
 {% extends 'reminder/base.html' %}
 {% load static %}
-{% block corecss %}
-<link rel="stylesheet" href="{% static 'css/base.css' %}">
-{% endblock %}
+
 {% block title %}Tasks{% endblock %}
 
-
-{% block content %}
-<div class="container-fluid tasks">
+<body>
+    <div class="container-fluid tasks">
     <title>Task List</title>
     <div class="task-table">
         <h1>Current Tasks:</h1>
-
+        
         <table>
             {% for task in tasks %}
             <tr>
@@ -48,30 +45,42 @@
                 </td>
             </tr>
             {% endfor %}
-
         </table>
-
-
-
     </div>
     
 <a class="btn btn-success" href="/add">Add item</a>
 
 </div>
-<div class="row">
-    <div class="card card-body map-box col-8">
-      <h2>Map</h2>
+</body>
 
-     
-    </div>
-<div class="row">
-    <div class="card card-body tasks-box col-4">
-        <h2>Tasks</h2>
-    </div>
-  </div>
+{% block content %}
+
+<div class="container">
+    
+        <div class="row">
+                <div class="card card-body map-box col-8">
+                    <h2>Map</h2>
+                </div>
+        </div>
+        <div class="row">
+            <div class="card card-body tasks-box col-4">
+                <h2>Tasks</h2>
+            </div>
+        </div>
 </div>
+{% endblock %}
 
+{% block postloadjs %}
 
+<script> 
+    let map;
+    function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -34.397, lng: 150.644 },
+        zoom: 8,
+    });
+    }
+    window.initMap = initMap;
 
-
+</script>
 {% endblock %}

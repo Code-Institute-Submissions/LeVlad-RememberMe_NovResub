@@ -22,4 +22,3 @@ class Task(models.Model):
     def __str__(self):
         return f'There is {self.name} to do in {self.location} \
             with a {self.priority} priority'
-

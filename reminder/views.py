@@ -23,7 +23,3 @@ def handler404(request, *args, **kwargs):
 def handler500(request):
     """ Error Handler 500 - Internal Server Error """
     return render(request, "errors/500.html", status=500)
-
-#current_l = geolocator.geocode(city)
-
-#m = folium.map(width=300, height=500, location=current_l)

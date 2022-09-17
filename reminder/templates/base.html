@@ -45,42 +45,4 @@
 {% endblock %}
 
 
-{% block postload_js %}
-<div class="coordinates">
-<p class="logo">Coordinates Getter</p>
 
-<button class="btn btn-info" onclick="getLocation()">Try It</button>
-
-<p id="demo"></p>
-
-<script>
-var x = document.getElementById("demo");
-
-function getLocation() {
-  if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(showPosition);
-  } else { 
-    x.innerHTML = "Geolocation is not supported by this browser.";
-  }
-}
-
-function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
-}
-</script>
-
-</div>
-
-<script> 
-  let map;
-  function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: -34.397, lng: 150.644 },
-      zoom: 8,
-  });
-  }
-  window.initMap = initMap;
-
-</script>
-{% endblock %}

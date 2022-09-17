@@ -1,5 +1,5 @@
 <!-- profile_template-->
-{% extends 'reminder/base.html' %}
+{% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% load static %}
 
@@ -54,12 +54,7 @@
 
   </table>
 {% else %}
-<h2>Log In</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Log In</button>
-</form>
+
 {% endif %}
 
 {% endblock %}

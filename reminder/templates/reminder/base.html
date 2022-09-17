@@ -12,8 +12,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {% endblock %}
 
-  
-
+ 
   {% block corecss %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +32,9 @@
         {% include 'main-header.html' %}
  </nav>
 </header>
+{% block content %}
 
+{% endblock %}
 </body>
 
 {% block corejs %}
@@ -42,11 +43,13 @@
   integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
   crossorigin="anonymous"></script>
 {% endblock %}
+
+
 {% block postload_js %}
+<div class="coordinates">
+<p class="logo">Coordinates Getter</p>
 
-<p>Click the button to get your coordinates.</p>
-
-<button onclick="getLocation()">Try It</button>
+<button class="btn btn-info" onclick="getLocation()">Try It</button>
 
 <p id="demo"></p>
 
@@ -66,6 +69,8 @@ function showPosition(position) {
   "<br>Longitude: " + position.coords.longitude;
 }
 </script>
+
+</div>
 
 <script> 
   let map;

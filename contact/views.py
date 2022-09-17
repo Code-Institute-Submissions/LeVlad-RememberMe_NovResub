@@ -24,7 +24,7 @@ def contact_view(request):
             messages.success(request, 'Thank you for your message.\
                  We will contact you soon.')
             try:
-                send_mail(subject, message, from_email, ["admin@remember.com"])
+                send_mail(subject, message, from_email, ["office@remember.com"])
             except BadHeaderError:
                 return HttpResponse("Invalid header found.")
             return redirect("success")
@@ -33,4 +33,7 @@ def contact_view(request):
 
 
 def success_view(request):
+    """
+    A view to render the success page once the information has been captured
+    """
     return render(request, 'success.html')

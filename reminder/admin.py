@@ -9,6 +9,3 @@ class ReminderAdmin(admin.ModelAdmin):
         map_fields.AddressField: {
             'widget': map_widgets.GoogleMapsAddressWidget},
     }
-
-
-admin.site.register(Task)

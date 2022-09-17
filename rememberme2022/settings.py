@@ -41,12 +41,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
     'django_google_maps',
     'reminder',
     'crispy_forms',
     'profiles',
-    'allauth',
-    'allauth.account',
     'tasks',
     'home',
     'contact',
@@ -55,6 +56,10 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -162,9 +167,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-LOGIN_REDIRECT_URL = "home"
-LOGOUT_REDIRECT_URL = "home"
 
 DEFAULT_FROM_EMAIL = "admin@remember.com"
 EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"

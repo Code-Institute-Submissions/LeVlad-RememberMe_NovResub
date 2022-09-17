@@ -29,7 +29,7 @@ def contact_view(request):
                 return HttpResponse("Invalid header found.")
             return redirect("success")
 
-    return render(request, "contact.html", {"form": form})
+    return render(request, "contact/contact.html", {"form": form})
 
 
 def success_view(request):

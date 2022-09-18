@@ -58,6 +58,16 @@ body{
     border-width:2px;
     border-style: solid;
 }
+
+#map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
 .tasks-box{
     
     background-color: rgb(222, 252, 252);

@@ -36,4 +36,4 @@ def success_view(request):
     """
     A view to render the success page once the information has been captured
     """
-    return render(request, 'success.html')
+    return render(request, 'contact/success.html')

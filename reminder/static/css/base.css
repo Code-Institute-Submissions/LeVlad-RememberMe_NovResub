@@ -7,14 +7,16 @@ body{
     border-width:2px;
     border-style: solid;
 }
+
+/* Header ************/
 .main-header {
     margin-top: 2rem;
     margin-left: 3rem;
     width: auto;
     height: auto;
-    
-    
 }
+
+/* Logo ************/
 .logo-box {
     margin-top: 3rem;
     margin-left: 3rem;
@@ -28,6 +30,9 @@ body{
     font-weight: 300;
     font-style: italic;
      }
+
+/* Reminder Boxes ************/
+
 .map-box{
     border: 1px;
     border-color: rgb(25, 27, 27);
@@ -52,3 +57,18 @@ body{
     border-style: solid;
 }
 
+/* Bootstrap Toasts ************/
+
+.message-container{
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 9999999999;
+}
+
+.ux-messages-header{
+    overflow: visible;
+}
+.ux-messages-body{
+    height:2px;
+}

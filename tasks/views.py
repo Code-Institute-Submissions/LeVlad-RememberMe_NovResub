@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from .models import Task
 from .forms import TaskForm
 
@@ -23,14 +24,21 @@ def add_task(request):
         form = TaskForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, f'{form} added successfully!')
+        else:
+            messages.error(request,
+                           f'Failed to add {form}. Please ensure the form is valid.')
+    else:
+        form = TaskForm()
 
-        return redirect('get_task_list')
+    template = 'tasks/add_task.html'
+
     form = TaskForm()
     context = {
             'form': form
         }
 
-    return render(request, 'add_task.html', context)
+    return render(request, template, context)
 
 
 def edit_task(request, task_id):
@@ -39,7 +47,6 @@ def edit_task(request, task_id):
     retrieves the information that was sent
     and populates the form ready to edit
     """
-
     task = get_object_or_404(Task, id=task_id)
     if request.method == "POST":
         form = TaskForm(request.POST, instance=task)

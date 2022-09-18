@@ -33,7 +33,23 @@
  </nav>
 </header>
 {% block content %}
-
+{% if messages %}
+  <div class="message-container">
+      {% for message in messages %}
+          {% with message.level as level %}
+              {% if level == 40 %}
+                  {% include 'ux_messages/error_message.html' %}
+              {% elif level == 30 %}
+              {% include 'ux_messages/warning_message.html' %}
+              {% elif level == 25 %}
+              {% include 'ux_messages/success_message.html' %}
+              {% else %}
+              {% include 'ux_messages/info_message.html' %}
+              {% endif %}
+          {% endwith %}
+      {% endfor %}
+  </div>
+{% endif %}
 {% endblock %}
 </body>
 
@@ -44,5 +60,9 @@
   crossorigin="anonymous"></script>
 {% endblock %}
 
-
+{% block postloadjs %}
+<script type="text/javascript">
+  $('.toast').toast('show');
+ </script>
+ {% endblock %}
 

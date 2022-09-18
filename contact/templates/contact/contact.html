@@ -3,8 +3,8 @@
 
 {% block content %}
 <div class="overlay col-xs"></div>
-<div class="contact-form-container">
-<h1 class=" contact-form mt-5">Contact Us</h1>
+<div class="contact-form-container mt-5 input-group input-group-lg">
+<h1 class=" contact-form mt-5 mr-5 ml-5 ">Contact Us</h1>
 <form method="post">
     {% csrf_token %}
     {{ form|crispy}}

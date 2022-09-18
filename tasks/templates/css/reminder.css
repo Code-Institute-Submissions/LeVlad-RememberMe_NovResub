@@ -32,8 +32,8 @@ body{
     border: 1px;
     border-color: rgb(25, 27, 27);
     background-color: rgb(222, 252, 252);
-    width: 60rem;
-    height: 30rem;
+    width: 45rem;
+    height: 15rem;
     margin-top: 5rem;
     margin-left: 2rem;
     margin-bottom: 12rem;
@@ -42,7 +42,7 @@ body{
     border-style: solid;
 }
 .tasks-box{
-    margin-right:4rem;
+    margin-right:2rem;
     background-color: rgb(222, 252, 252);
     width:18rem;
     height:25rem;

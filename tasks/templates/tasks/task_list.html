@@ -6,67 +6,66 @@
 
 {% block content %}
     <div class="container-fluid tasks">
-    <title>Task List</title>
-    <div class="task-table">
-        <h1>Current Tasks:</h1>
-        
-        <table>
-            {% for task in tasks %}
-            <tr>
-                {% if task.done %}
-                <td><strike>{{ task.name }}</strike></td>
-                {% else %}
-                <td><strong>{{ task.name }}</strong></td>
-                {% endif %}
-
-                <td>{{ task.location }}</td>
-                <td><strong>{{ task.priority }}</strong></td>
-                <td>{{ task.done }}</td>
-                <td>
-                    <a href="/edit/{{ task.id }}">
-                        <button>Edit</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/toggle/{{ task.id }}">
-                        <button>Change</button>
-                    </a>
-                </td>
-                <td>
-                    <a href="/delete/{{ task.id }}">
-                        <button>Delete</button>
-                    </a>
-                </td>
-            </tr>
-            {% empty %}
-            <tr>
-                <td>
-                    <h2>There are no tasks</h2>
-                </td>
-            </tr>
-            {% endfor %}
-        </table>
-    </div>
-    
-<a class="btn btn-success" href="/add">Add item</a>
 
 </div>
 
-
-
-
-<div class="container">
+<div class="container container-fluid">
     
         <div class="row">
                 <div class="card card-body map-box col-8">
-                    <h2>Map</h2>
+                    <h3>Map</h3>
                 </div>
-        </div>
-        <div class="row">
+        
+       
             <div class="card card-body tasks-box col-4">
-                <h2>Tasks</h2>
-            </div>
-        </div>
+                <h3>Tasks</h3>
+                <title>Task List</title>
+                <div class="task-table">
+                    <h4>Current Tasks:</h4>
+                    
+                    <table>
+                        {% for task in tasks %}
+                        <tr>
+                            {% if task.done %}
+                            <td><strike>{{ task.name }}</strike></td>
+                            {% else %}
+                            <td><strong>{{ task.name }}</strong></td>
+                            {% endif %}
+
+                            <td class="location-box">{{ task.location }}</td>
+                            <td class="priority-box"><strong>{{ task.priority }}</strong></td>
+                            <td class="status-box">{{ task.done }}</td>
+                            <td>
+                                <a href="/edit/{{ task.id }}">
+                                    <button class="btn btn-info btn-task">Edit</button>
+                                </a>
+                                <a href="/toggle/{{ task.id }}">
+                                    <button class="btn btn-info btn-task">Change</button>
+                                </a>
+                                <a href="/delete/{{ task.id }}">
+                                    <button class="btn btn-info btn-task">Delete</button>
+                                </a>
+                            </td>
+                            <td>
+                                
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        {% empty %}
+                        <tr>
+                            <td>
+                                <h2>There are no tasks</h2>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+    
+                <a class="btn btn-success mt-2" href="/add">Add item</a>
+                            </div>
+                        </div>
 </div>
 {% endblock %}
 

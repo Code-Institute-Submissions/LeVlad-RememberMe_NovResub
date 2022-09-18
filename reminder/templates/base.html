@@ -38,13 +38,13 @@
       {% for message in messages %}
           {% with message.level as level %}
               {% if level == 40 %}
-                  {% include 'ux_messages/error_message.html' %}
+                  {% include 'reminder/ux_messages/error_message.html' %}
               {% elif level == 30 %}
-              {% include 'ux_messages/warning_message.html' %}
+              {% include 'reminder/ux_messages/warning_message.html' %}
               {% elif level == 25 %}
-              {% include 'ux_messages/success_message.html' %}
+              {% include 'reminder/ux_messages/success_message.html' %}
               {% else %}
-              {% include 'ux_messages/info_message.html' %}
+              {% include 'reminder/ux_messages/info_message.html' %}
               {% endif %}
           {% endwith %}
       {% endfor %}

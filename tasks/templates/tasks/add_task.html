@@ -13,7 +13,7 @@
 {% block content %}
     <h1>Add Task</h1>
     <div class="div_center">
-        <form method="POST" action="/add">
+        <form method="POST" action="{% url 'tasks/add_task.html' %}">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="div">
@@ -23,7 +23,7 @@
         </form>
 
         <div class="back-btn btn btn-info">
-            <a href="/tasks/templates/tasks/task_list.html">Back</a>
+            <a href="tasks/task_list.html">Back</a>
         </div>
     </div>
 {% endblock %}

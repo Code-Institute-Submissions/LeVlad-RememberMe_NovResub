@@ -1,13 +1,6 @@
 from django.shortcuts import render
 
 
-def get_login(request):
-    """
-    Function to get the login page
-    """
-    return render(request, 'login.html')
-
-
 def get_index(request):
     """
     Function to get the index page

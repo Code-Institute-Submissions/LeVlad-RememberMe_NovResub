@@ -31,14 +31,11 @@ def add_task(request):
     else:
         form = TaskForm()
 
-    template = 'tasks/add_task.html'
-
-    form = TaskForm()
-    context = {
+        context = {
             'form': form
         }
 
-    return render(request, template, context)
+    return render(request, 'tasks/add_task.html', context)
 
 
 def edit_task(request, task_id):
@@ -54,12 +51,13 @@ def edit_task(request, task_id):
             form.save()
 
         return redirect('get_task_list')
+
     form = TaskForm(instance=task)
     context = {
             'form': form
         }
 
-    return render(request, 'edit_task.html', context)
+    return render(request, 'tasks/edit_task.html', context)
 
 
 def toggle_task(_request, task_id):
@@ -70,6 +68,7 @@ def toggle_task(_request, task_id):
     task = get_object_or_404(Task, id=task_id)
     task.done = not task.done
     task.save()
+    messages.success(_request, 'Successfully updated task!')
     return redirect('get_task_list')
 
 
@@ -77,5 +76,6 @@ def delete_task(_request, task_id):
     """Function to delete the task"""
     task = get_object_or_404(Task, id=task_id)
     task.delete()
+    messages.success(_request, 'Task successfully deleted!')
 
     return redirect('get_task_list')

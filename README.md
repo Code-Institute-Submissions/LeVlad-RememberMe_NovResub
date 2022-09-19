@@ -14,10 +14,12 @@
 Having a minimal design the site will focus more on functionality.
 
 Mobile 
-![MOBILE VIEW](https://user-images.githubusercontent.com/88729876/189557228-35572bd7-c184-4230-b61e-5e85b620b4c6.jpg)
+![Mobile View](https://user-images.githubusercontent.com/88729876/190950218-f747e8ae-cb36-42db-9e7a-de9b016eff22.png)
+
 
 Desktop
-![DESKTOP VIEW 2](https://user-images.githubusercontent.com/88729876/189557233-6ffc63ab-b295-4b2b-a15d-102a8fe1c501.jpg)
+![Desktop View](https://user-images.githubusercontent.com/88729876/190950146-c4da1f60-c6e0-48d5-bbc6-1a915cdc87db.png)
+
 
 Tablet
 ![Tablet View](https://user-images.githubusercontent.com/88729876/190949967-22bbfdef-1f9a-4ce3-92d9-7965fba97801.png)
@@ -73,12 +75,6 @@ Python
 ## Tests ##
 
 
-![REM testing views Error - filter instead of get error fixed](https://user-images.githubusercontent.com/88729876/171025473-f5a12f24-2f3e-4e98-b9f1-102e6e245ea9.jpg)
-![REM testing views Error - filter instead of get](https://user-images.githubusercontent.com/88729876/171025492-5a5069fe-f459-489c-8585-2b8390c57890.jpg)
-![RME  Error Caught before migration](https://user-images.githubusercontent.com/88729876/171025511-406e30fb-fd53-4af7-a362-e07116354a0b.jpg)
-![RME Create SuperUser 2](https://user-images.githubusercontent.com/88729876/171025545-c862422f-4f96-4ce3-a563-288531e7ebc7.jpg)
-![RME Create SuperUser](https://user-images.githubusercontent.com/88729876/171025559-304abf79-76a9-48ed-b0de-e058c291f8bb.jpg)
-![RME testing forms](https://user-images.githubusercontent.com/88729876/171025563-4574d204-38a6-45e1-a542-bba9282cf549.jpg)
 
 ![REM coverage report](https://user-images.githubusercontent.com/88729876/171025461-796e072f-b50e-412e-b6c5-a153543494e1.jpg)
 …]()

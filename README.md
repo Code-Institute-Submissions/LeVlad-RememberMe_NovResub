@@ -63,7 +63,7 @@ As a User I want to be able to modify a reminder in case I make a mistake so tha
 
 ## Purpose ##
 
-The main purpose of the website is to be a virtual space where users can set reminders with details of # what #, # where # and # priority #.
+The main purpose of the website is to be a virtual space where users can set reminders with details of **what**, **where** and **priority**.
 
 
 
@@ -76,10 +76,10 @@ Python
 
 
 ## Frameworks ##
-Django
-Bootstrap
-Libraries
-Jquery
+Django  
+Bootstrap 
+Libraries 
+jQuery  
 
 
 

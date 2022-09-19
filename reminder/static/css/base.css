@@ -186,11 +186,9 @@ body{
 /* Media Queries ************/
 
 @media only screen and (max-width:600px){
-    [class*="col-"]{
-    width: 100%;},
-    .container{
-        width:100%;
-    }
+    .col,.col-4,.col-6,.col-12,.container{
+    width: 100%;
+    
 }
 @media only screen and (max-width:768px){
     
@@ -200,4 +198,5 @@ body{
 }
 @media only screen and (max-width:1200px){
     
+}
 }

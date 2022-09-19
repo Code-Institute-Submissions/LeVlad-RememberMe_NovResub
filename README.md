@@ -31,21 +31,23 @@ Having a minimal design the site will focus more on functionality.
 ## Mobile ##
 ![Mobile View](https://user-images.githubusercontent.com/88729876/190970214-b668f6f3-29c3-428e-893c-32950c72ad48.png)
 
-
+---
 
 ## Desktop ##
 ![Desktop View](https://user-images.githubusercontent.com/88729876/190970166-71cad197-0463-4166-97ac-e49014b61aaf.png)
 
+---
 
 ## Tablet ##
 ![Tablet View](https://user-images.githubusercontent.com/88729876/190970185-ca593dd2-956a-49ac-85c6-8ae3014708b5.png)
 
 
+---
 
 
 ## User Stories ##
 
-Admin
+## Admin ##
 
 As an Admin I want to be able to access the back end so that I can repair/maintain/approve requests
 
@@ -58,7 +60,7 @@ As an Admin I can login so that I can check and update the account details
 As an Admin I want to use geolocation so that I can triangulate user's position and alert them of their set reminders for the specified location
 
 
-User
+## User ##
 
 As a User I want to create an account so that I can save all my reminders
 
@@ -84,24 +86,24 @@ The main purpose of the website is to be a virtual space where users can set rem
 
 ## Technologies ##
 
-1.HTML
-2.CSS
-3.JavaScript
-4.Python
+1. **HTML**
+2. **CSS**
+3. **JavaScript**
+4. **Python**
 
 
 ## Frameworks ##
 
-1.Django  
-2.Bootstrap 
-3.Libraries 
-4.jQuery  
+1. **Django**  
+2. **Bootstrap** 
+3. **Libraries** 
+4. **jQuery**  
 
 
 ## Tools ##
-Heroku
-Git
-Postgres
+1. **Heroku**
+2. **Git**
+3. **Postgres**
 
 
 ## Tests ##

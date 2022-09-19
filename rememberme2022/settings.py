@@ -169,7 +169,7 @@ else:
     {
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
-]
+    ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 

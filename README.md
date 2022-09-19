@@ -4,6 +4,8 @@
 # User Stories #
 # Purpose #
 # Technologies #
+# Frameworks #
+# Tools #
 # Testing #
 # References #
 # Acknowledgements #
@@ -24,7 +26,7 @@ Desktop
 Tablet
 ![Tablet View](https://user-images.githubusercontent.com/88729876/190949967-22bbfdef-1f9a-4ce3-92d9-7965fba97801.png)
 
-### Layout ###
+
 
 ## User Stories ##
 
@@ -72,12 +74,75 @@ CSS
 JavaScript
 Python
 
+
+## Frameworks ##
+Django
+Bootstrap
+Libraries
+Jquery
+
+
+
+## Tools ##
+Heroku
+Git
+Postgres
+
+
 ## Tests ##
 
+I have not undertaken any automated testing and I chose to manually test the site functionality and layout.
+
+Idea 💡: After creating all the templates I wanted to ensure their linkeage and functionality
+
+Test 📝: To test this, I went through each and made sure they were loading correctly.
+
+Result 👷: All templates loaded as expected in development but one issue appeared after deployment.
+
+Verdict ✅: This test passed in it's basic form, amendments are required to the "remnider" template as it is not loading correctly.
+
+---
+
+Idea 💡: Once the functionality of the sign up and login were done I wanted to test and see if they work correctly.
+
+Test 📝: To test this, I went through using a different device, created an account and managed to access the rest of the pages.
+
+Result 👷: Everything worked as expected.
+
+Verdict ✅: This test passed but further improvements can be made by ensuring the security aspect is kept and the design is more appealing.
+
+---
+
+Idea 💡: A good UX experience is given by interactions with the pages on a website, that's why messages have been implemented in the site.
+
+Test 📝: Testing has been done by confirming every action that should send a message, is doing so.
+
+Result 👷: Users are receiving success messages for loggin in and out and error messages for incorrect forms.
+
+Verdict ✅: This test passed and no further corrections are required.
+
+---
 
 
-![REM coverage report](https://user-images.githubusercontent.com/88729876/171025461-796e072f-b50e-412e-b6c5-a153543494e1.jpg)
-…]()
+
+## Issues ##
+
+Issue 🐛: Heroku Deployment failed.
+Cause🔧: The Cloudinary environmental variable isn't configured correctly.
+Resolution✅: Removing the variable name from the variable key resolved the issue.
+
+---
+
+Issue 🐛: Heroku CSS file not found while deploying
+Cause🔧: The Cloudinary environmental variable isn't configured correctly.
+Resolution✅: Removing the variable name from the variable key resolved the issue.
+
+Unresolved Issues
+
+1. The CSS can't be found by Heroku even with Whitenoise installed.
+2. The main app functionality has stopped working and can't be accessed at the moment until a fix can be found.
+3. 
+
 
 ## Acknowledgements ##
 1. Code Institute Courses

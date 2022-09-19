@@ -10,21 +10,33 @@
 # References #
 # Acknowledgements #
 
+---
+**RemembeMe**
+
+*RemmeberMe* meant to be a site where anyone can create their own profiles and use the build in app that aims to be a location based reminder. Anyone will be able to create their own task list, set up reminders and never forget about shopping to pick up, dry cleaning to drop off or important messages to deliver.
 
 ## Design ##
 
 Having a minimal design the site will focus more on functionality.
 
+# Wireframes #
+
+Site map
+![Site Map Wireframe](https://user-images.githubusercontent.com/88729876/190978319-4349250f-55b0-4777-9585-9b2038a69c9b.png)
+
+
 Mobile 
-![Mobile View](https://user-images.githubusercontent.com/88729876/190950218-f747e8ae-cb36-42db-9e7a-de9b016eff22.png)
+![Mobile View](https://user-images.githubusercontent.com/88729876/190970214-b668f6f3-29c3-428e-893c-32950c72ad48.png)
+
 
 
 Desktop
-![Desktop View](https://user-images.githubusercontent.com/88729876/190950146-c4da1f60-c6e0-48d5-bbc6-1a915cdc87db.png)
+![Desktop View](https://user-images.githubusercontent.com/88729876/190970166-71cad197-0463-4166-97ac-e49014b61aaf.png)
 
 
 Tablet
-![Tablet View](https://user-images.githubusercontent.com/88729876/190949967-22bbfdef-1f9a-4ce3-92d9-7965fba97801.png)
+![Tablet View](https://user-images.githubusercontent.com/88729876/190970185-ca593dd2-956a-49ac-85c6-8ae3014708b5.png)
+
 
 
 
@@ -69,18 +81,18 @@ The main purpose of the website is to be a virtual space where users can set rem
 
 ## Technologies ##
 
-HTML
-CSS
-JavaScript
-Python
+1.HTML
+2.CSS
+3.JavaScript
+4.Python
 
 
 ## Frameworks ##
-Django  
-Bootstrap 
-Libraries 
-jQuery  
 
+1.Django  
+2.Bootstrap 
+3.Libraries 
+4.jQuery  
 
 
 ## Tools ##
@@ -139,7 +151,7 @@ Resolution✅: Adding the app name to the path resolved the issue.
 
 
 
-Unresolved Issues
+# Unresolved Issue s#
 
 1. Sign Up and Login templates do not extend "base.html".
 2. The main app functionality has stopped working and can't be accessed at the moment until a fix can be found.

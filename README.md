@@ -19,13 +19,39 @@ Mobile
 Desktop
 ![DESKTOP VIEW 2](https://user-images.githubusercontent.com/88729876/189557233-6ffc63ab-b295-4b2b-a15d-102a8fe1c501.jpg)
 
-
+Tablet
+![Tablet View](https://user-images.githubusercontent.com/88729876/190949967-22bbfdef-1f9a-4ce3-92d9-7965fba97801.png)
 
 ### Layout ###
 
 ## User Stories ##
 
-![Agile Working](https://user-images.githubusercontent.com/88729876/189502894-8ddb91e2-8323-4962-8fc6-c0ebcd0d0928.jpg)
+Admin
+
+As an Admin I want to be able to access the back end so that I can repair/maintain/approve requests
+
+As an Admin I can login so that I can update lists and tick off completed reminders
+
+As an Admin I want to create and edit a database so that I can delete or recover any important information requested by users
+
+As an Admin I can login so that I can check and update the account details
+
+As an Admin I want to use geolocation so that I can triangulate user's position and alert them of their set reminders for the specified location
+
+
+User
+
+As a User I want to create an account so that I can save all my reminders
+
+As a User I can receive an e-mail so that I can confirm my account has been created.
+
+As a user I can login so that I can view my account.
+
+As a User I can create a profile so that I can view my reminders
+
+As a User I want to be able to set a reminder for a specific location so that I can remember to do the task
+
+As a User I want to be able to modify a reminder in case I make a mistake so that I can correct the mistake and be accurate
 
 
 
@@ -37,15 +63,12 @@ The main purpose of the website is to be a virtual space where users can set rem
 
 
 
-### Building the site ###
-
-![RME Create SuperUser 2](https://user-images.githubusercontent.com/88729876/171025545-c862422f-4f96-4ce3-a563-288531e7ebc7.jpg)
-![RME Create SuperUser](https://user-images.githubusercontent.com/88729876/171025559-304abf79-76a9-48ed-b0de-e058c291f8bb.jpg)
-![Uploading REM coverage install and run.jpg![REM coverage report html](https://user-images.githubusercontent.com/88729876/171025437-068bf89e-436a-4e78-9285-6db6aad511c6.jpg)
-
-
 ## Technologies ##
 
+HTML
+CSS
+JavaScript
+Python
 
 ## Tests ##
 

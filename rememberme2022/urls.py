@@ -17,15 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
-from tasks import views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-    path('home/', include('home.urls')),
-    path('task_list/', views.get_task_list, name='task_list'),
-    path('tasks/', include('tasks.urls', 'tasks/')),
+    path('', include('home.urls')),
+    path('tasks/', include('tasks.urls', 'tasks')),
     path('contact/', include('contact.urls')),
     path('profiles/', include('profiles.urls')),
 

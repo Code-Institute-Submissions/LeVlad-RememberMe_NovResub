@@ -37,7 +37,7 @@
                             {% else %}
                             <td><strong>{{ task.name }}</strong></td>
                             {% endif %}
-
+                            
                             <td class="location-box">{{ task.location }}</td>
                             <td class="priority-box"><strong>{{ task.priority }}</strong></td>
                             <td class="status-box">{{ task.done }}</td>
@@ -69,7 +69,7 @@
                     </table>
                 </div>
     
-                <a class="btn btn-success mt-2" href="{% url 'add' %}">Add item</a>
+                <a class="btn btn-success mt-2" href="{% url 'add_task' %}">Add item</a>
                             </div>
                         </div>
 </div>

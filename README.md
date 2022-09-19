@@ -134,14 +134,15 @@ Resolution✅: Removing the variable name from the variable key resolved the iss
 ---
 
 Issue 🐛: Heroku CSS file not found while deploying
-Cause🔧: The Cloudinary environmental variable isn't configured correctly.
-Resolution✅: Removing the variable name from the variable key resolved the issue.
+Cause🔧: The static files path was missing the app name.
+Resolution✅: Adding the app name to the path resolved the issue.
+
+
 
 Unresolved Issues
 
-1. The CSS can't be found by Heroku even with Whitenoise installed.
+1. Sign Up and Login templates do not extend "base.html".
 2. The main app functionality has stopped working and can't be accessed at the moment until a fix can be found.
-3. 
 
 
 ## Acknowledgements ##

@@ -1,5 +1,5 @@
 body{
-    background-color:rgb(15, 153, 75);
+    background-color:rgb(20, 218, 105);
 }
 
 .btn{
@@ -11,31 +11,70 @@ body{
 /* Header ************/
 .main-header {
     margin-top: 2rem;
-    margin-left: 2rem;
     width: auto;
     height: auto;
+    background-color: aquamarine;
+    border-color: black;
+    border-width:3px;
+    border-style: solid;
+}
+.home-header-container{
+    background-color:aquamarine;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width:250rem;
+    height:35rem;
+    border-color: black;
+    border-width:3px;
+    border-style: solid;
+    
 }
 
+
+/* Buttons ************/
 .btn-nav{
     width: 6rem;
+    margin-bottom: 2rem;
+    border-color: black;
+    border-width:3px;
+    border-style: solid;
+    
 }
 .btn-task{
     width: 6rem;
     margin-top: 1rem;
     margin-left: 2rem;
+    border-color: black;
+    border-width:3px;
+    border-style: solid;
+    
 }
-
+.btn-nav-socials{
+    display:inline-block;
+    }
 
 .h3{
     text-transform: uppercase;
 }
 
 /* Logo ************/
+
+#logo{
+    display: block;
+    margin-top: 8rem;
+    margin-left: auto;
+    margin-right: auto;
+    width:65%;
+}
 .logo-box {
     margin-top: 3rem;
     margin-left: 3rem;
     text-transform: uppercase;
     font-weight: bold;
+ }
+ .logo-box-footer{
+    text-align: center;
+    margin-bottom: 1rem;
  }
 
  .logo{
@@ -43,7 +82,16 @@ body{
     text-transform: uppercase;
     font-weight: 600;
     font-style: italic;
+    margin-top: 2rem;
      }
+
+.logo-socials{
+        display:block;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-style: italic;
+        margin-top: -1rem;
+    }
 
 /* Reminder Boxes ************/
 
@@ -105,4 +153,51 @@ body{
 }
 .ux-messages-body{
     height:2px;
+}
+
+
+.welcome-message{
+ margin-top:1rem;
+}
+
+.welcome-message-text{
+    margin-top: 3rem;    
+    text-shadow: 2rem;
+    font-size: large;
+    font-style: inherit;
+}
+
+
+/* Footer ************/
+.footer-container{
+    display: block;
+    margin-top: 2rem;
+    width: auto;
+    height: auto;
+    background-color: aquamarine;
+    border-color: black;
+    border-width:3px;
+    border-style: solid;
+}
+.container{
+    margin-bottom: 3rem;
+}
+
+/* Media Queries ************/
+
+@media only screen and (max-width:600px){
+    [class*="col-"]{
+    width: 100%;},
+    .container{
+        width:100%;
+    }
+}
+@media only screen and (max-width:768px){
+    
+}
+@media only screen and (max-width:992px){
+    
+}
+@media only screen and (max-width:1200px){
+    
 }

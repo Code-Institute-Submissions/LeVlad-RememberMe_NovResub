@@ -13,16 +13,16 @@
 {% block content %}
     <h1>Add Task</h1>
     <div class="div_center">
-        <form method="POST" action="add">
+        <form class="ml-2 mb-2 mr-2" method="POST">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="div">
-                <p><button class="btn btn-success" href="{% url 'add_task' %}" type="submit">Add item</button>
+                <p><button class="btn btn-success" href="" type="submit">Add item</button>
                 </p>
             </div>
         </form>
 
-        <div class="back-btn btn btn-info">
+        <div class="back-btn btn btn-info ml-2 text-light">
             <a href="tasks/task_list.html">Back</a>
         </div>
     </div>

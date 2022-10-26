@@ -25,6 +25,8 @@ def add_task(request):
         if form.is_valid():
             form.save()
             messages.success(request, f'{form} added successfully!')
+            context = {
+            'form': form}
         else:
             messages.error(request,
                            f'Failed to add {form}. Please ensure the form is valid.')

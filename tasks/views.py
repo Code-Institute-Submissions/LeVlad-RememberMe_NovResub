@@ -62,7 +62,7 @@ def edit_task(request, task_id):
     return render(request, 'tasks/edit_task.html', context)
 
 
-def toggle_task(_request, task_id):
+def toggle_task(request, task_id):
     """
     Function to change between the states of a task
     the user ca change it from done to not done
@@ -70,14 +70,13 @@ def toggle_task(_request, task_id):
     task = get_object_or_404(Task, id=task_id)
     task.done = not task.done
     task.save()
-    messages.success(_request, 'Successfully updated task!')
+    messages.success(request, 'Successfully updated task!')
     return redirect('get_task_list')
 
 
-def delete_task(_request, task_id):
+def delete_task(request, task_id):
     """Function to delete the task"""
     task = get_object_or_404(Task, id=task_id)
     task.delete()
-    messages.success(_request, 'Task successfully deleted!')
-
+    messages.success(request, 'Task successfully deleted!')
     return redirect('get_task_list')

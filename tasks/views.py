@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.urls import reverse_lazy
 from django.contrib import messages
 from .models import Task
 from .forms import TaskForm
@@ -13,7 +12,7 @@ def get_task_list(request):
     context = {
         'tasks': tasks,
     }
-    return render(request, 'tasks/task_list.html', context)
+    return render(request, 'profiles/tasks/task_list.html', context)
 
 
 def add_task(request):
@@ -27,7 +26,8 @@ def add_task(request):
             form.save()
             messages.success(request, f'{form} added successfully!')
             context = {
-            'form': form}
+                'form': form
+                }
         else:
             messages.error(request,
                            f'Failed to add {form}. Please ensure the form is valid.')
@@ -52,6 +52,7 @@ def edit_task(request, task_id):
         form = TaskForm(request.POST, instance=task)
         if form.is_valid():
             form.save()
+            messages.success(request, f'{form} updated successfully!')
 
         return redirect('get_task_list')
 

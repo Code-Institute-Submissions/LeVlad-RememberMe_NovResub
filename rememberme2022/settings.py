@@ -121,6 +121,8 @@ AUTHENTICATION_BACKENDS = [
 ]
 STATIC_URL = '/reminder/static/'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'reminder', 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

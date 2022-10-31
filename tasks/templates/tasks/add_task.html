@@ -13,7 +13,7 @@
 {% block content %}
     <h1>Add Task</h1>
     <div class="div_center">
-        <form class="ml-2 mb-2 mr-2" method="POST">
+        <form class="ml-5 mb-5 mr-5" method="POST">
             {% csrf_token %}
             {{ form|crispy }}
             <div class="div">
@@ -22,8 +22,8 @@
             </div>
         </form>
 
-        <div class="back-btn btn btn-info ml-2 text-light">
-            <a href="/profiles/tasks">Back</a>
+        <div class="back-btn btn btn-info ml-2 text-white">Back
+            <a href="/profiles/tasks"></a>
         </div>
     </div>
 {% endblock %}

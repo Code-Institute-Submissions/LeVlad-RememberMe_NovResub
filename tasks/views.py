@@ -28,6 +28,7 @@ def add_task(request):
             context = {
                 'form': form
                 }
+            return redirect('get_task_list')
         else:
             messages.error(request,
                            f'Failed to add {form}. Please ensure the form is valid.')
@@ -39,6 +40,8 @@ def add_task(request):
         }
 
     return render(request, 'tasks/add_task.html', context)
+    
+
 
 
 def edit_task(request, task_id):

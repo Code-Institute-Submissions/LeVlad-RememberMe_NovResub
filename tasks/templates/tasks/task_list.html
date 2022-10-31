@@ -42,13 +42,13 @@
                             <td class="priority-box"><strong>{{ task.priority }}</strong></td>
                             <td class="status-box">{{ task.done }}</td>
                             <td>
-                                <a href="/tasks/edit/{{ task.id }}">
+                                <a href="/profiles/tasks/edit/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Edit</button>
                                 </a>
-                                <a href="/toggle/{{ task.id }}">
+                                <a href="/profiles/tasks/toggle/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Change</button>
                                 </a>
-                                <a href="/tasks/delete/{{ task.id }}">
+                                <a href="/profiles/tasks/delete//{{ task.id }}">
                                     <button class="btn btn-info btn-task">Delete</button>
                                 </a>
                             </td>
@@ -76,18 +76,6 @@
 {% endblock %}
 
 {% block postloadjs %}
-
-<script> 
-    let map;
-    function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: -34.397, lng: 150.644 },
-        zoom: 8,
-    });
-    }
-    window.initMap = initMap;
-
-</script>
 
 <div class="coordinates">
 <p class="logo">Coordinates Getter</p>

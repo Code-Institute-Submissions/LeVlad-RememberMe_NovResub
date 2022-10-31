@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse_lazy
 from django.contrib import messages
 from .models import Task
 from .forms import TaskForm
@@ -58,7 +59,6 @@ def edit_task(request, task_id):
     context = {
             'form': form
         }
-
     return render(request, 'tasks/edit_task.html', context)
 
 

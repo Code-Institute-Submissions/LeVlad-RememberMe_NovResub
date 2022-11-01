@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Task(models.Model):
@@ -6,7 +7,8 @@ class Task(models.Model):
     """Creating a new class for tasks that can inherit from Django
     and use attributes as descriptive options for Task list
     """
-
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, null=True, blank=True)
     name = models.CharField(max_length=50, null=False, blank=False)
     priority = models.CharField(max_length=10, null=False, blank=False)
     location = models.CharField(max_length=200, null=False, blank=False)
@@ -22,3 +24,6 @@ class Task(models.Model):
     def __str__(self):
         return f'There is {self.name} to do in {self.location} \
             with a {self.priority} priority'
+
+    class Meta:
+        ordering = ['done']

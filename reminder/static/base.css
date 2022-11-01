@@ -129,9 +129,8 @@ body{
 }
 
 .location-box,.priority-box,.status-box,.name-box,.name-box{
-    border-color:black;
-    border-width: 1px;
-    border-style:solid;
+    
+    border-style: none;
     
 }
 

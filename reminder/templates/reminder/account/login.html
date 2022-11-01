@@ -1,13 +1,9 @@
 {% extends 'base.html' %}
 
-{% load i18n %}
-{% load account socialaccount %}
-
-{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
 {% block content %}
 
-<h3>{% trans "Sign In with us" %}</h3>
+<h3>Log In with us</h3>
 
 <div class="container">
   <div class="row">
@@ -25,11 +21,11 @@
   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
   {% endif %}
  
-  <button class="primaryAction" type="submit">{% trans "Sign In" %}</button>
+  <button class="primaryAction" type="submit">{% "Log In" %}</button>
 </form>
 
 </div>
 </div>
 </div>
 
-{% endblock %}
+{% endblock content %}

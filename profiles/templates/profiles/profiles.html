@@ -12,7 +12,7 @@
 {% block content %}
 <div class="container container-fluid">
   
-    <div class="row">
+    <div class="profile-row">
         <div class="col-12 mt-4 ">
             <h2>Welcome {{user}} to your profile page</h2>
         </div>         
@@ -21,8 +21,21 @@
     <div class="col-12">
         <div class="container-fluid">
             <div class="profile">
-                <p><h2>{{user}}'s tasks</h2></p>
-                <p>{{tasks}}</p>
+                <div class="info-box">
+                <p class="ml-2 mt-2">
+                    Here you can find your tasks either by pressing the "Tasks" button below or the "Reminder" button above.
+                </p>
+                <p class="ml-2 mt-2">
+                    Once there you can create new tasks <b>create</b>, <b>delete</b>, <b>edit</b> and even <b>change</b> the status from done to <strike>not done</strike>.
+                </p>
+
+            </div>
+            <p><h2>Curent tasks</h2></p>
+                <p>
+                    <a class="btn btn-info ml-2" href="/profiles/tasks">Tasks</a>
+                </p>
+
+               
             </div>
         </div>
     </div>

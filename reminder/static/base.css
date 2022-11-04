@@ -20,6 +20,7 @@ body{
     border-color: black;
     border-width:3px;
     border-style: solid;
+    text-align: center;
 }
 .home-header-container{
     background-color:aquamarine;
@@ -35,6 +36,13 @@ body{
 
 
 /* Buttons ************/
+
+.btn{
+border: 0.5px solid #000000;
+-webkit-box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
+-moz-box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
+box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
+}
 .btn-nav{
     width: 6rem;
     margin-bottom: 2rem;
@@ -101,7 +109,7 @@ body{
 /* Reminder Boxes ************/
 
 .map-box{
-    border: 1px;
+    border: 0.5px;
     border-color: rgb(25, 27, 27);
     background-color: rgb(222, 252, 252);
     width: auto;
@@ -127,20 +135,28 @@ body{
     margin-top: 3rem;
     margin-left: 2rem;
     border-color: rgb(17, 17, 17);
-    border-width:2px;
-    border-style: solid;
     width: auto;
     height: auto;
     display: inline-block;
+    
 }
 
 .task-table{
-    table-layout:fixed;
     width: 100%;
     font-size: x-small;
+    overflow-y: hidden;
    }
-
-.location-box,.priority-box,.status-box,.name-box,.name-box,.task-table{
+.tasks-box,.map-box,.profile,.info-box,.welcome-message-box,.footer-container,.main-header,.home-header-container{
+   border-radius: 28px 28px 28px 28px;
+-moz-border-radius: 28px 28px 28px 28px;
+-webkit-border-radius: 28px 28px 28px 28px;
+border: 0.5px solid #000000;
+-webkit-box-shadow: 28px 17px 33px 0px rgba(0,0,0,0.99);
+-moz-box-shadow: 28px 17px 33px 0px rgba(0,0,0,0.99);
+box-shadow: 28px 17px 33px 0px rgba(0,0,0,0.99);
+    
+}
+.location-box,.priority-box,.status-box,.name-box,.name-box{
     
     border-style: none;
     width: auto;
@@ -149,7 +165,9 @@ body{
 }
 
 .coordinates{
-    margin-top:2rem;
+    margin-left:2rem;
+    text-align: center;
+    
 }
 
 /* Bootstrap Toasts ************/
@@ -185,7 +203,17 @@ body{
     
     
 }
+.profile{
+    background-color: aquamarine;
+    border: solid 0.5px;
+    width:65rem;
+    height:20rem;
+    box-shadow: 2rem;
+}
 
+.info-box{
+    background-color: rgb(243, 243, 135);
+}
 /* Footer ************/
 .footer-container{
     display: block;
@@ -194,7 +222,6 @@ body{
     height: auto;
     background-color: aquamarine;
     border-color: black;
-    border-width:3px;
     border-style: solid;
 }
 .container{
@@ -210,15 +237,23 @@ body{
 }
 @media only screen and (max-width:768px){
     [class*="col-"] {
-        width: 100%;
+        width: auto;
+        height:auto;
       }
     
 }
 @media only screen and (max-width:992px){
-
+   .map-box{
+    width: 0%;
+   }
+   .tasks-box{
+    width: 100%;
+   }
     
 }
-@media only screen and (max-width:1200px){
-    
+@media only screen and (max-width:1096px){
+    .map-box{
+        width:50%;
+    }
 }
 }

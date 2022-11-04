@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, include
 from tasks import views as t_views
 from . import views
 
@@ -10,5 +10,6 @@ urlpatterns = [
     path('tasks/edit/<int:task_id>/', t_views.edit_task, name='edit_task'),
     path('tasks/toggle/<int:task_id>', t_views.toggle_task, name='toggle_task'),
     path('tasks/delete/<int:task_id>/', t_views.delete_task, name='delete_task'),
+
 
 ]

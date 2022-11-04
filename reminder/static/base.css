@@ -1,6 +1,9 @@
 body{
     background-color:rgb(20, 218, 105);
 }
+* {
+    box-sizing: border-box;
+  }
 
 .btn{
     border-color: rgb(6, 71, 34);
@@ -41,12 +44,14 @@ body{
     
 }
 .btn-task{
-    width: 6rem;
+    width:100%;
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
     border-color: black;
     border-width:3px;
     border-style: solid;
+    font-size: x-small;
+    display: block ;
     
 }
 .btn-nav-socials{
@@ -119,18 +124,27 @@ body{
 .tasks-box{
     
     background-color: rgb(222, 252, 252);
-    width: auto;
-    height: auto;
     margin-top: 3rem;
     margin-left: 2rem;
     border-color: rgb(17, 17, 17);
     border-width:2px;
     border-style: solid;
+    width: auto;
+    height: auto;
+    display: inline-block;
 }
 
-.location-box,.priority-box,.status-box,.name-box,.name-box{
+.task-table{
+    table-layout:fixed;
+    width: 100%;
+    font-size: x-small;
+   }
+
+.location-box,.priority-box,.status-box,.name-box,.name-box,.task-table{
     
     border-style: none;
+    width: auto;
+    height: auto;
     
 }
 
@@ -155,17 +169,22 @@ body{
 }
 
 
-.welcome-message{
+.welcome-message-box{
  margin-top:1rem;
+ width: auto;
+ height: auto;
+ 
+
 }
 
 .welcome-message-text{
     margin-top: 3rem;    
     text-shadow: 2rem;
-    font-size: large;
-    font-style: inherit;
+    width: auto;
+    height: auto;
+    
+    
 }
-
 
 /* Footer ************/
 .footer-container{
@@ -185,14 +204,18 @@ body{
 /* Media Queries ************/
 
 @media only screen and (max-width:600px){
-    .col,.col-4,.col-6,.col-12,.container{
+    .col,.col-4,.col-6,.col-12,.container,.container-fluid,.btn-task,.task-table,.base-container,.welcome-message-text{
     width: 100%;
     
 }
 @media only screen and (max-width:768px){
+    [class*="col-"] {
+        width: 100%;
+      }
     
 }
 @media only screen and (max-width:992px){
+
     
 }
 @media only screen and (max-width:1200px){

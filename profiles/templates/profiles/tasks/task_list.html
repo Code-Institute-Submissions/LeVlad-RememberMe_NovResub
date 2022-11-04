@@ -14,7 +14,7 @@
 <div class="container container-fluid">
     
         <div class="row">
-                <div class="card card-body map-box col-8">
+                <div class="card card-body map-box col-3">
                     <h3>Map {{color}}</h3>
                     <div id="map" class="google-map">
                         <script
@@ -25,16 +25,18 @@
                 </div>
         
        
-            <div class="card card-body tasks-box col-4">
-                <h3>Tasks</h3>
+            <div class="card card-body tasks-box col-9">
+                <h3>{{user}}'s Tasks</h3>
                 <title>Task List</title>
                 <div class="task-table">
                     <h4>Current Tasks:</h4>
                     
-                    <table>
+                    <table class="task-table">
+                        
+                        
                         {% for task in tasks %}
                         <tr>
-                            {% if task.done %}
+                            {% if task.done  %}
                             <td><strike>{{ task.name }}</strike></td>
                             {% else %}
                             <td><strong>{{ task.name }}</strong></td>
@@ -47,20 +49,21 @@
                                 <a href="/profiles/tasks/edit/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Edit</button>
                                 </a>
+                                
+                                
+                            </td>
+                            <td>
                                 <a href="/profiles/tasks/toggle/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Change</button>
                                 </a>
+                            </td>
+                            <td>
                                 <a href="/profiles/tasks/delete/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Delete</button>
                                 </a>
                             </td>
-                            <td>
-                                
-                            </td>
-                            <td>
-                                
-                            </td>
                         </tr>
+
                         {% empty %}
                         <tr>
                             <td>
@@ -68,6 +71,8 @@
                             </td>
                         </tr>
                         {% endfor %}
+
+                        
                     </table>
                 </div>
     

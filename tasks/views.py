@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Task
+from profiles.models import Profile
 from .forms import TaskForm
 
 
@@ -8,20 +9,16 @@ def get_task_list(request):
     """
     Function to get all the elements and render them in HTML
     """
+    # user = Profile.user
     tasks = Task.objects.all()
+    # tasks.filter(user=user)
+    
+    
     context = {
         'tasks': tasks,
-    }
+           }
 
     return render(request, 'profiles/tasks/task_list.html', context)
-
-
-def get_context_data(self, **kwargs):
-
-    context = super().get_context_data(**kwargs)
-    context['tasks'] = context['tasks'].filter(user=self.request.user)
-    context['count'] = context['tasks'].filter(done=False)
-    return context
 
 
 def add_task(request):
@@ -29,7 +26,7 @@ def add_task(request):
     Function to add a task to the Reminders list by filling a form with
     descriptive information of where, what and if it is done
     """
-    
+
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():

@@ -1,4 +1,5 @@
-{% extends 'base.html' %}
+{% extends '/templates/base.html' %}
+
 
 {% block content %}
 
@@ -9,8 +10,8 @@
     <div class="col-md-8 mt-3 offset-md-2">
       
    
-<p>Welcome to RememberMe please sign up using the link below
-<a href="signup.html">sign up</a></p>
+<p>{% blocktrans %}Welcome to RememberMe please sign up using the link below
+<a href="{{ signup_url }}">sign up</a> .{% endblocktrans %}</p>
 
 
 <form class="login" method="POST" action="{% url 'account_login' %}">

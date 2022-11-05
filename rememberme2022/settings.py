@@ -91,7 +91,7 @@ ROOT_URLCONF = 'rememberme2022.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates/allauth'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Task
-from profiles.models import Profile
 from .forms import TaskForm
 
 
@@ -9,14 +8,11 @@ def get_task_list(request):
     """
     Function to get all the elements and render them in HTML
     """
-    # user = Profile.user
+    
     tasks = Task.objects.all()
-    # tasks.filter(user=user)
-    
-    
     context = {
         'tasks': tasks,
-           }
+            }
 
     return render(request, 'profiles/tasks/task_list.html', context)
 

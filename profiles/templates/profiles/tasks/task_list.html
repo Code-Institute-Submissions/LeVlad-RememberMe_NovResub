@@ -28,10 +28,12 @@
                     
                     <table class="task-table table-responsive">
                         
+                       
+                          {% for task in tasks %}
+                                                 
                         
-                        {% for task in tasks %}
-                        <tr>
-                            {% if task.done  %}
+                        <tr>                            
+                            {% if task.done %}
                             <td><strike>{{ task.name }}</strike></td>
                             {% else %}
                             <td><strong>{{ task.name }}</strong></td>
@@ -58,14 +60,15 @@
                                 </a>
                             </td>
                         </tr>
-
-                        {% empty %}
-                        <tr>
+                        
+                    {% empty %}
+                         <tr>
                             <td>
                                 <h2>There are no tasks</h2>
                             </td>
                         </tr>
                         {% endfor %}
+                  
 
                         
                     </table>

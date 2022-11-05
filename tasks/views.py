@@ -8,11 +8,13 @@ def get_task_list(request):
     """
     Function to get all the elements and render them in HTML
     """
-    
+    current_user = request.user
     tasks = Task.objects.all()
     context = {
         'tasks': tasks,
             }
+
+    tasks.filter(pk=current_user.id)
 
     return render(request, 'profiles/tasks/task_list.html', context)
 

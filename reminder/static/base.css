@@ -146,7 +146,7 @@ box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
     font-size: x-small;
     overflow-y: hidden;
    }
-.tasks-box,.map-box,.profile,.info-box,.welcome-message-box,.footer-container,.main-header,.home-header-container{
+.tasks-box,.map-box,.profile,.info-box,.logo-image,.welcome-message-box,.footer-container,.main-header,.home-header-container{
    border-radius: 28px 28px 28px 28px;
 -moz-border-radius: 28px 28px 28px 28px;
 -webkit-border-radius: 28px 28px 28px 28px;
@@ -206,9 +206,9 @@ box-shadow: 28px 17px 33px 0px rgba(0,0,0,0.99);
 .profile{
     background-color: aquamarine;
     border: solid 0.5px;
-    width:65rem;
-    height:20rem;
-    box-shadow: 2rem;
+    width:auto;
+    height:auto;
+    
 }
 
 .info-box{
@@ -231,7 +231,7 @@ box-shadow: 28px 17px 33px 0px rgba(0,0,0,0.99);
 /* Media Queries ************/
 
 @media only screen and (max-width:600px){
-    .col,.col-4,.col-6,.col-12,.container,.container-fluid,.btn-task,.task-table,.base-container,.welcome-message-text{
+    .col,.col-4,.col-6,.col-12,.container,.profile,.container-fluid,.btn-task,.task-table,.base-container,.welcome-message-text{
     width: 100%;
     
 }

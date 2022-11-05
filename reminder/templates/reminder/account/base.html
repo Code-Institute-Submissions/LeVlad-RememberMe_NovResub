@@ -1,0 +1,91 @@
+<!--base_template-->
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+  {% block meta %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% endblock %}
+
+ 
+  {% block corecss %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300&family=Open+Sans:wght@300&family=Source+Sans+Pro:wght@300&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'base.css' %}">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/394a00d2fc.js" crossorigin="anonymous"></script>
+  {% endblock %}
+
+  {% block corejs %}
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+  crossorigin="anonymous"></script>
+{% endblock %}
+ 
+  <title>RememberMe {% block extra_title %}{% endblock %}</title>
+</head>
+<body>
+<header>
+  <nav>
+        {% include 'main-header.html' %}
+ </nav>
+
+ <!-- Messages -->
+ <div class="container">
+  <div class="row">
+      <div class="col-md-8 offset-md-2">
+          {% for message in messages %}
+          <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+              {{ message | safe }}
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          {% endfor %}
+      </div>
+  </div>
+</div>
+</header>
+
+<div class="base-container">
+  {% block content %}
+  
+  {% endblock content %}
+</div>
+
+
+
+
+
+{% block footer %}
+<footer>
+{% include 'footer.html' %}
+</footer>
+{% endblock %}
+
+<!--Messages Timer-->
+
+<script>
+  setTimeout(function () {
+      let messages = document.getElementById('msg');
+      let alert = new bootstrap.Alert(messages);
+      alert.close();
+  }, 2500);
+</script>
+</body>
+
+
+
+{% block postloadjs %}
+ {% endblock %}
+

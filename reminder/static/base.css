@@ -72,12 +72,20 @@ box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
 
 /* Logo ************/
 
+
+.base-logo{
+    text-transform: uppercase;
+    font-family: 'Papyrus';
+    font-weight: 800;
+}
 #logo{
     display: block;
     margin-top: 8rem;
     margin-left: auto;
     margin-right: auto;
     width:65%;
+    font-family: 'Papyrus';
+    font-weight: 800;
 }
 .logo-box {
     margin-top: 3rem;
@@ -96,6 +104,8 @@ box-shadow: inset -98px 53px 34px -45px rgba(0,0,0,0.71);
     font-weight: 600;
     font-style: italic;
     margin-top: 2rem;
+    font-family: 'Papyrus';
+    font-weight: 800;
      }
 
 .logo-socials{

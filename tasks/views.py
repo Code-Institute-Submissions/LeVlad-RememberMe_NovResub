@@ -14,7 +14,7 @@ def get_task_list(request):
         'tasks': tasks,
             }
 
-    tasks.filter(pk=current_user.id)
+    tasks.filter(user=current_user.id)
 
     return render(request, 'profiles/tasks/task_list.html', context)
 

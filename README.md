@@ -13,7 +13,7 @@
 
 ---
 **RemembeMe**
-![ReminderApp DesktopView](https://user-images.githubusercontent.com/88729876/190986183-6e1447f8-6a13-4d1f-b367-ad060e64cd0f.jpg)
+![image](https://user-images.githubusercontent.com/88729876/199887775-71bce17e-72ad-4934-bf7e-47dd5d66f38b.png)
 
 *RemmeberMe* is meant to be a site where anyone can create their own profiles and use the build in app that aims to be a location based reminder. Anyone will be able to create their own task list, set up reminders and never forget about shopping to pick up, dry cleaning to drop off or important messages to deliver.
 
@@ -232,5 +232,7 @@ python3 manage.py runserver
 7. https://www.w3schools.com/html/html5_geolocation.asp
 8. https://github.com/earthcomfy/Django-registration-and-login-system
 9. https://favicon.io/favicon-converter/
+10.https://www.cssmatic.com/border-radius
+11.https://www.cssmatic.com/box-shadow
 
 

@@ -25,13 +25,15 @@
                 <title>Task List</title>
                 <div class="task-table">
                     <h4>Current Tasks:</h4>
-                    
+                   
+                   
+                   
                     <table class="task-table table-responsive">
                         
-                       
-                          {% for task in tasks %}
-                                                 
-                        
+                                   
+                    {% for task in tasks %}
+                         
+                      
                         <tr>                            
                             {% if task.done %}
                             <td><strike>{{ task.name }}</strike></td>
@@ -39,9 +41,11 @@
                             <td><strong>{{ task.name }}</strong></td>
                             {% endif %}
                             
+                            
                             <td class="location-box">{{ task.location }}</td>
                             <td class="priority-box"><strong>{{ task.priority }}</strong></td>
                             <td class="status-box">{{ task.done }}</td>
+                            
                             <td>
                                 <a href="/profiles/tasks/edit/{{ task.id }}">
                                     <button class="btn btn-info btn-task">Edit</button>
@@ -68,8 +72,9 @@
                             </td>
                         </tr>
                         {% endfor %}
-                  
-
+                        
+                     
+                    
                         
                     </table>
                 </div>

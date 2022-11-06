@@ -1,20 +1,17 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
-from .models import Task
 from .forms import TaskForm
+from .models import Task
 
 
 def get_task_list(request):
     """
     Function to get all the elements and render them in HTML
     """
-    current_user = request.user
     tasks = Task.objects.all()
     context = {
-        'tasks': tasks,
+            'tasks': tasks,
             }
-
-    tasks.filter(user=current_user.id)
 
     return render(request, 'profiles/tasks/task_list.html', context)
 
@@ -28,6 +25,7 @@ def add_task(request):
     if request.method == "POST":
         form = TaskForm(request.POST)
         if form.is_valid():
+            form.instance.user = request.user
             form.save()
             messages.success(request, f'{form} added successfully!')
             context = {
@@ -41,7 +39,8 @@ def add_task(request):
         form = TaskForm()
 
         context = {
-            'form': form
+            'form': form,
+
         }
 
     return render(request, 'tasks/add_task.html', context)

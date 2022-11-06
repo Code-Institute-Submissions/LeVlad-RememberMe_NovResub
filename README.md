@@ -156,10 +156,10 @@ Resolution✅: Adding the app name to the path resolved the issue.
 
 
 
-# Unresolved Issues #
+# Ongoing Issues #
 
 1. Sign Up and Login templates do not extend "base.html" and although I have found several solutions online, none worked.
-2. The main app functionality has stopped working and can't be accessed at the moment until a fix can be found. **Access** can be gained in the admin section using the  admin credentials.
+
 
 
 ## Deployment ##
